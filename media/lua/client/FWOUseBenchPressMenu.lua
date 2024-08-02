@@ -139,15 +139,15 @@ function FWOUseBenchPressMenu.onUseBench(worldobjects, player, machine, actionTy
 		forceDropHeavyItems(player)
 		
 		if not player:getInventory():contains("Base.BarBell", true) then
-			player:Say("I need a barbell to do this exercise")
+			player:Say("Il me faut une barre pour faire cet exercice")
 			return
 		end
 		if player:getMoodles():getMoodleLevel(MoodleType.Endurance) > 2 then
-			player:Say("Too exhausted to use")
+			player:Say("Trop de fatigue pour faire cet exercice")
 			return
 		end
 		if player:getMoodles():getMoodleLevel(MoodleType.Pain) > 3 then
-			player:Say("Too much pain to use")
+			player:Say("Trop de douleur pour faire cet exercice")
 			return
 		end
 		
@@ -164,7 +164,7 @@ function FWOUseBenchPressMenu.onUseBench(worldobjects, player, machine, actionTy
 		end
 		
 		if player:getMoodles():getMoodleLevel(MoodleType.HeavyLoad) > 2 then
-			player:Say("Too heavy to use")
+			player:Say("Trop de poids pour faire cet exercice")
 			return
 		end
 			

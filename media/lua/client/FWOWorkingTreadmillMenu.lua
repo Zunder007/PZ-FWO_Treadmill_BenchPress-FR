@@ -40,7 +40,7 @@ FWOWorkingTreadmillMenu2.doBuildMenu = function(player, context, worldobjects)
 				
 				if customName == "Hamster Wheel" then
 					if not ((SandboxVars.ElecShutModifier > -1 and GameTime:getInstance():getNightsSurvived() < SandboxVars.ElecShutModifier) or thisObject:getSquare():haveElectricity()) then
-						getSpecificPlayer(player):Say("The treadmill needs electricity to run")
+						getSpecificPlayer(player):Say("Le tapis roulant a besoin de courant pour fonctionner")
 						return
 					end
 					
@@ -143,11 +143,11 @@ FWOWorkingTreadmillMenu2.onUseTreadmill = function(worldobjects, player, machine
 		player:setSecondaryHandItem(nil)
 		
 		if player:getMoodles():getMoodleLevel(MoodleType.Endurance) > 2 then
-			player:Say("Too exhausted to use")
+			player:Say("Trop de fatigue pour courir")
 			return
 		end
 		if player:getMoodles():getMoodleLevel(MoodleType.Pain) > 3 then
-			player:Say("Too much pain to use")
+			player:Say("Trop de douleur pour courir")
 			return
 		end
 				
@@ -165,7 +165,7 @@ FWOWorkingTreadmillMenu2.onUseTreadmill = function(worldobjects, player, machine
 		end	
 		
 		if player:getMoodles():getMoodleLevel(MoodleType.HeavyLoad) > 2 then
-			player:Say("Too heavy to use")
+			player:Say("Trop de poids pour courir")
 			return
 		end
 		ISTimedActionQueue.add(ISFitnessAction:new(player, actionType, length , ISFitnessUI:new(0,0, 600, 350, player) , FitnessExercises.exercisesType.treadmill ))
